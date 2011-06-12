@@ -1,23 +1,57 @@
 // Let's start with the basics
-$base-color: #333;
-$active-color: #ff8100;
-$base-gradient: 'flat';
+$base-color: #3a4759;
+$naranjo: #f29200;
+$active-color: #263040;
+$base-gradient: 'bevel';
 
 // Buttons
 $button-gradient: 'bevel';
 
 // Lists
-$list-bg-color: #eee;
-$list-color: #333;
-$list-pressed-color: #ddd;
+$list-bg-color: #364457;
+$list-color: #BFCFE1;
+$list-pressed-color: $active-color;
+$list-pressed-color: black;
 $list-active-gradient: 'recessed';
 $list-header-bg-color: #999;
 $list-header-gradient: 'bevel';
 
-// Tabs
-$tabs_dark_color: #000;
+.x-panel-body {
+  color: $list-color;
+  background-color: $base-color;
+}
+
+$spinner-color: $base-color;
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.speakers-list .x-list-item .x-list-item-body {
+
+  font-size: .8em;
+
+  p {
+    color: $naranjo;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 1.2em !important;
+  }
+
+  img {
+    -webkit-box-shadow: rgba(#000, .8) 0 0 6px;
+    margin-right: 10px;
+    float: left;
+  }
+}
+
+
+$tabs-dark-active-color: $naranjo;
 
 @import 'sencha-touch/default/all';
+
+@include pictos-iconmask('user_fave');
+@include pictos-iconmask('search');
 
 @include sencha-panel;
 @include sencha-buttons;

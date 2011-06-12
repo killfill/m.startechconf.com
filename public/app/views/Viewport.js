@@ -2,7 +2,6 @@ app.views.Viewport = Ext.extend(Ext.TabPanel, {
 	fullscreen: true,
 	tabBar: {
 		dock: 'bottom',
-		ui: 'light',
 		layout: {
 			pack: 'center'
 		}
@@ -11,9 +10,9 @@ app.views.Viewport = Ext.extend(Ext.TabPanel, {
 	initComponent: function() {
 
 		Ext.apply(app.views, {
-			front:    { xtype: 'app-front' },
-			speakers: { xtype: 'app-speakers' },
-			sponsors: { xtype: 'app-sponsors' }
+			front:    { xtype: 'app-front', iconCls: 'home' },
+			speakers: { xtype: 'app-speakers', iconCls: 'user_fave' },
+			sponsors: { xtype: 'app-sponsors', iconCls: 'search' }
     		});
 
 		Ext.apply(this, {
