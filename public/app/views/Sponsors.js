@@ -4,6 +4,11 @@ app.views.Sponsors = Ext.extend(Ext.Panel, {
 		title: 'Sponsors'
 	}],
 	title: 'Sponsors',
-	html: 'Spons'
+	layout: 'fit',
+	items: [{
+		xtype: 'list',
+		store: 'sponsors',
+		itemTpl: '<img src="{image}"/> <a href="{link}">{name}</a>'
+	}]
 });
 Ext.reg('app-sponsors', app.views.Sponsors);

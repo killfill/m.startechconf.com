@@ -11,26 +11,14 @@ app.views.Viewport = Ext.extend(Ext.TabPanel, {
 	initComponent: function() {
 
 		Ext.apply(app.views, {
-			home: {
-				title: 'asd',
-				xtype: 'panel'
-			},
-			front: {
-				title: 'sip',
-				xtype: 'app-front'
-			},
-			speakers: {
-				xtype: 'app-speakers'
-			},
-			sponsors: {
-				xtype: 'app-sponsors'
-			}
+			front:    { xtype: 'app-front' },
+			speakers: { xtype: 'app-speakers' },
+			sponsors: { xtype: 'app-sponsors' }
     		});
 
 		Ext.apply(this, {
 			items: [
 				app.views.front,
-				app.views.home,
 				app.views.speakers,
 				app.views.sponsors
 			]

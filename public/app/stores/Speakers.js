@@ -1,11 +1,10 @@
 app.stores.speakers = new Ext.data.JsonStore({
 	model: 'Speaker',
-	data: [
-		{name: 'uno'},
-		{name: 'uno2'},
-		{name: 'uno3'},
-	],
-	autoLoad: true
+	autoLoad: true,
+	proxy: {
+		type: 'rest',
+		url: 'api/speakers'
+	}
 });
 
 Ext.regStore('speakers', app.stores.speakers);
