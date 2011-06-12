@@ -10,15 +10,29 @@ $button-gradient: 'bevel';
 // Lists
 $list-bg-color: #364457;
 $list-color: #BFCFE1;
-$list-pressed-color: $active-color;
 $list-pressed-color: black;
 $list-active-gradient: 'recessed';
 $list-header-bg-color: #999;
 $list-header-gradient: 'bevel';
 
-.x-panel-body {
-  color: $list-color;
+.x-panel {
   background-color: $base-color;
+}
+.front .x-panel-body {
+  color: $list-color;
+  background: url('http://www.startechconf.com/media/images/main-logo.png') no-repeat bottom right;
+}
+.x-toolbar-title {
+  background: url("http://src.sencha.io/100/http://www.startechconf.com/media/images/main-logo.png") 5px -3px no-repeat;
+  text-shadow: 2px 2px 7px #000 !important;
+  text-align: right !important;
+  margin-right: 10px;
+  margin-top: 3px;
+  text-transform: uppercase !important;
+}
+
+.front .x-toolbar-title {
+  background: url();
 }
 
 $spinner-color: $base-color;

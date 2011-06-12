@@ -1,3 +1,3 @@
 Ext.regModel('Speaker', {
-	fields: ['name', 'image', 'desc', 'twitter']
+	fields: ['name', 'image', 'desc', 'twitter', 'link']
 });

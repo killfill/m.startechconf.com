@@ -2,8 +2,8 @@ app.views.Front = Ext.extend(Ext.Panel, {
 	dockedItems: [{
 		xtype: 'toolbar',
 		title: 'Startech Conf',
-		cls: 'front-toolbar'
 	}],
+	cls: 'front',
 	title: 'Home',
 	items: [
 		{ xtype: 'component',

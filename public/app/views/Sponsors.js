@@ -8,7 +8,7 @@ app.views.Sponsors = Ext.extend(Ext.Panel, {
 	items: [{
 		xtype: 'list',
 		store: 'sponsors',
-		itemTpl: '<img src="{image}"/> <a href="{link}">{name}</a>'
+		itemTpl: '<img src="http://src.sencha.io/100/{image}"/> <a target=_blank href="{link}">{name}</a>'
 	}]
 });
 Ext.reg('app-sponsors', app.views.Sponsors);
