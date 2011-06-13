@@ -9,7 +9,7 @@ app.views.Speakers = Ext.extend(Ext.Panel, {
 		cls: 'speakers-list',
 		xtype: 'list',
 		store: 'speakers',
-		itemTpl: '<img src="{image}"/> <p>{name}</p> {desc}',
+		itemTpl: '<img src="{image}"/> <p><a class=name href="https://twitter.com/#!/{twitter}">{name}</a></p> {desc}',
 	}]
 });
 Ext.reg('app-speakers', app.views.Speakers);

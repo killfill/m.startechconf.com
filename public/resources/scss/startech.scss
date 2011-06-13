@@ -18,10 +18,18 @@ $list-header-gradient: 'bevel';
 .x-panel {
   background-color: $base-color;
 }
+
+/* Sale en ingles loading... */
+.x-loading-msg {
+  font-size: 0px !important;
+}
+
 .front .x-panel-body {
   color: $list-color;
   background: url('http://www.startechconf.com/media/images/main-logo.png') no-repeat bottom right;
 }
+
+
 .x-toolbar-title {
   background: url("http://src.sencha.io/100/http://www.startechconf.com/media/images/main-logo.png") 5px -3px no-repeat;
   text-shadow: 2px 2px 7px #000 !important;
@@ -35,6 +43,31 @@ $list-header-gradient: 'bevel';
   background: url();
 }
 
+
+.frontContent {
+  padding: 10px;
+  div.desc {
+  }
+  div.when {
+    padding-bottom: 3px;
+    color: white;
+    text-align: right;
+    font-size: 0.7em;
+  }
+  div.weare {
+    color: $naranjo;
+    font-size: 1.3em;
+    text-align: right;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  div.prices {
+    float: right;
+    text-align: right;
+    text-shadow: 2px 2px 5px black;
+  }
+}
+
 $spinner-color: $base-color;
 
 a {
@@ -46,7 +79,7 @@ a {
 
   font-size: .8em;
 
-  p {
+  .name {
     color: $naranjo;
     text-shadow: 1px 1px 2px #000;
     font-size: 1.2em !important;
@@ -57,8 +90,13 @@ a {
     margin-right: 10px;
     float: left;
   }
+
 }
 
+.twitter {
+  background: transparent url('http://www.startechconf.com/media/images/twitter_newbird_blue.png') left center no-repeat;
+  padding-left: 22px;
+}
 
 $tabs-dark-active-color: $naranjo;
 
