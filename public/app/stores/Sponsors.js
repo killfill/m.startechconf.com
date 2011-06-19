@@ -3,7 +3,7 @@ app.stores.sponsors = new Ext.data.JsonStore({
 	autoLoad: true,
 	proxy: {
 		type: 'rest',
-		url: 'api/sponsors'
+		url: 'api/data/sponsors'
 	}
 });
 

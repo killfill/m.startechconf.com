@@ -3,7 +3,7 @@ app.stores.speakers = new Ext.data.JsonStore({
 	autoLoad: true,
 	proxy: {
 		type: 'rest',
-		url: 'api/speakers'
+		url: 'api/data/speakers'
 	}
 });
 

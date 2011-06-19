@@ -3,7 +3,7 @@ app.stores.front = new Ext.data.JsonStore({
 	autoLoad: true,
 	proxy: {
 		type: 'rest',
-		url: 'api/main'
+		url: 'api/data/main'
 	}
 });
 
