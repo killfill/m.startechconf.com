@@ -1,7 +1,7 @@
 app.views.Twitter = Ext.extend(Ext.Panel, {
 	dockedItems: [{
 		xtype: 'toolbar',
-		title: 'Twitter'
+		title: 'Twitter',
 	}],
 	title: 'Twitter',
 	layout: 'fit',
@@ -10,6 +10,7 @@ app.views.Twitter = Ext.extend(Ext.Panel, {
 		xtype: 'list',
 		store: 'tweets',
 		itemTpl: '<img src="{profile_image_url}" /><div class="right light">{created_at}</div><p class=name>@{from_user}</p>{text}',
+		plugins: [{ptype: 'pullrefresh'}],
 		listeners: {
 			selectionchange: function(sel, recs) {
 				var rec = recs[0];
