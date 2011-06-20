@@ -39,6 +39,12 @@ $list-header-gradient: 'bevel';
   text-transform: uppercase !important;
 }
 
+.x-msgbox-title .x-toolbar-title {
+  background: none;
+  text-transform: none !important;
+  text-align: center !important;
+}
+
 .front .x-toolbar-title {
   background: url();
 }
@@ -94,6 +100,13 @@ a {
 
 }
 
+.right {
+  float: right;
+}
+.light {
+  font-size: 0.7em;
+}
+
 .twitter {
   background: transparent url('http://www.startechconf.com/media/images/twitter_newbird_blue.png') left center no-repeat;
   padding-left: 22px;
@@ -105,6 +118,8 @@ $tabs-dark-active-color: $naranjo;
 
 @include pictos-iconmask('user_fave');
 @include pictos-iconmask('search');
+@include pictos-iconmask('chat');
+
 
 @include sencha-panel;
 @include sencha-buttons;
