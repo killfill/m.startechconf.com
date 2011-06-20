@@ -1,0 +1,15 @@
+{ "name": "m.startechconf.com"
+, "description": "Web site for startechconf.com"
+, "version": "0.0.1"
+, "author": "Phillip Neumann <pneumann@gmail.com>"
+, "engines": { "node": "~0.4.x" }
+, "main": "./run.js"
+, "dependencies": { 
+     "express": "*"
+   , "scrappy-do": "*"
+   , "cluster": "*"
+   , "cluster-live": "*"
+   , "cluster-mail": "*"
+   , "jade": "*"
+  }
+}

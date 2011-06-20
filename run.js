@@ -11,4 +11,4 @@ cluster('./lib/app.js')
   .use(cluster.pidfiles('pids'))
   .use(live())
   .use(mail('pneumann@gmail.com', {from: 'node@sofsis.cl'}))
-  .listen(3001);
+  .listen(7805);
