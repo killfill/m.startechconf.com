@@ -24,7 +24,7 @@ app.views.Front = Ext.extend(Ext.Panel, {
 		title: 'Startech Conf',
 		defaults: {ui: 'plain'},
 		items: [
-		  { text: '<a href="http://www.startechconf.com">web</a>' },
+		  { text: '<a href="http://www.startechconf.com?device=desktop">web</a>' },
 		  { text: '<a href="https://twitter.com/#!/startechconf" class=twitter></a>' },
 		],
 	}],
