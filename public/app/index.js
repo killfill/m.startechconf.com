@@ -1,7 +1,7 @@
 Ext.regApplication({
     icon: 'resources/images/icon.png'
   , glossOnIcon: false
-  , tabletStartupScreen: 'resources/images/tablet_startup.png'
+  , tabletStartupScreen: 'resources/images/tablet_startup.jpg'
 
   , name: 'app'
 
