@@ -20,14 +20,69 @@ Ext.reg('frontview', FrontView);
 
 app.views.Front = Ext.extend(Ext.Panel, {
 	dockedItems: [{
-		xtype: 'toolbar',
-		title: 'Startech Conf',
-		defaults: {ui: 'plain'},
-		items: [
-		  { text: '<a href="http://www.startechconf.com?device=desktop">web</a>' },
-		  { text: '<a href="https://twitter.com/#!/startechconf" class=twitter></a>' },
-		  { text: '<a href="https://facebook.com/startechconf" class=facebook></a>' },
-		],
+	xtype: 'toolbar',
+	title: 'Startech Conf',
+	defaults: {ui: 'plain'},
+	items: [
+		{ 
+			text: 'Menu',
+	        handler: function() {
+	            if (!this.popup) {
+	                this.popup = new Ext.Panel({
+	                    floating: true,
+	                    modal: true,
+	                    centered: true,
+	                    width: 300,
+	                    height: 300,
+	                    styleHtmlContent: true,
+						layout: {
+							pack: 'center',
+						},
+	                    scroll: 'vertical',
+						defaults: {
+					        xtype: 'button',
+							style: 'margin: 5px 0;'
+						},
+	                    html: '<p style="text-align: center;">&copy; StarTechConf</p>',
+	                    dockedItems: [{
+	                        dock: 'top',
+	                        xtype: 'toolbar',
+	                        title: 'Menu'
+	                    }],
+						items: [{
+							text: 'View in Desktop Version',
+							handler : function(){
+								location.href="http://www.startechconf.com/?device=desktop"; 
+							}
+						},{
+							text : 'Twitter',
+							ui: 'action',
+							handler : function(){
+								location.href="http://twitter.com/startechconf"; 
+							}
+						},{
+							text : 'Facebook',
+							ui: 'action',
+							handler : function(){
+								location.href="http://facebook.com/startechconf"; 
+							}
+						},{
+							text : 'Close',
+							scope: this,
+							handler : function(){
+								this.actions.hide();
+							}
+						}
+						]
+	                });
+	            }
+	            this.popup.show('pop');
+	        }		
+		
+		},
+		{ text: '<a href="https://twitter.com/#!/startechconf" class=twitter></a>' },
+		{ text: '<a href="https://facebook.com/startechconf" class=facebook></a>' },
+	],
 	}],
 	cls: 'front',
 	title: 'Home',
