@@ -70,7 +70,7 @@ app.views.Front = Ext.extend(Ext.Panel, {
 							text : 'Close',
 							scope: this,
 							handler : function(){
-								this.actions.hide();
+								this.popup.hide();
 							}
 						}
 						]
