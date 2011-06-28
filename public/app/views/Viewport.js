@@ -13,7 +13,7 @@ app.views.Viewport = Ext.extend(Ext.TabPanel, {
 			front:    { xtype: 'app-front', iconCls: 'home' },
 			speakers: { xtype: 'app-speakers', iconCls: 'user_fave' },
 			twitter: { xtype: 'app-twitter', iconCls: 'chat' },
-			sponsors: { xtype: 'app-sponsors', iconCls: 'search' }
+			sponsors: { xtype: 'app-sponsors', iconCls: 'favorites' }
     		});
 
 		Ext.apply(this, {
