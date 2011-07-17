@@ -67,6 +67,51 @@ app.views.Front = Ext.extend(Ext.Panel, {
 								location.href="http://facebook.com/startechconf"; 
 							}
 						},{
+							text : 'Map',
+							ui: 'action',
+							handler : function(){
+								app.views.map = new Ext.Panel({
+									dockedItems: [{
+										xtype: 'toolbar',
+										title: 'Mapa',
+									}, {
+										xtype: 'toolbar',
+										dock: 'bottom',
+										items: [{
+											xtpyE: 'button',
+											ui: 'back',
+											text: 'Back',
+											handler: function() {
+												app.views.viewport.show({type: 'slide', direction: 'right'});
+												app.views.map.destroy();
+											}
+
+										}]
+
+									}],
+									fullscreen: true,
+									items: [{
+										xtype: 'map',
+										listeners: {
+											afterrender: function(map) {
+											  var center = new google.maps.LatLng(-33.490874, -70.620461);
+											  map.update(center);
+											  var mark = new google.maps.Marker({
+												map: map.map,
+												position: center,
+												title: 'sip'
+											  });
+											  map.map.setZoom(15);
+											}
+										}
+									}]
+								});
+								this.popup.hide();
+								app.views.map.show({type: 'slide', direction: 'left'})
+								app.views.viewport.hide();
+							},
+							scope: this
+						},{
 							text : 'Close',
 							scope: this,
 							handler : function(){
