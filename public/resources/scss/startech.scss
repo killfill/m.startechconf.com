@@ -49,6 +49,19 @@ $list-header-gradient: 'bevel';
   background: url();
 }
 
+/* Sponsors */
+.sponsorsList > .x-scroller {
+  background-color: white !important;
+}   
+.sponsorsList > .x-scroller > .x-item-selected {
+  background-color: white !important;
+  background-image: none !important;
+}   
+.sponsorsList > .x-scroller a { 
+  color: black;
+  padding-left: 30px;
+}
+
 
 .frontContent {
   padding: 10px;
