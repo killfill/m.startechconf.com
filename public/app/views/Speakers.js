@@ -14,11 +14,33 @@ app.views.Speakers = Ext.extend(Ext.Panel, {
 			selectionchange: function(sel, recs) {
 				var rec = recs[0];
 				if (!rec) return;
-				Ext.Msg.confirm('Referencia externa', 'Abrir @'+rec.data.twitter+' en Twitter?', function(res){
-					if (res=='yes')
-						window.href='https://twitter.com/#!/'+rec.data.twitter;
-					sel.deselectAll();
+
+				var popup = new Ext.Panel({
+					floating: true,
+					modal: true,
+					width: 300,
+					height: 400,
+					centered: true,
+					scroll: 'vertical',
+					styleHtmlContent: true,
+					html: '<h3 class=abs_title>' + rec.data.abs_title + '</h3>' + rec.data.abs_content,
+					dockedItems: [{
+						xtype: 'toolbar',
+						items: [
+							{ text: '<a class=twitter />', ui: 'plain', handler: function() {
+							    window.location = 'https://twitter.com/#!/'+rec.data.twitter;
+							  }
+							},
+							{ xtype: 'spacer'},
+							{ text: 'Close', handler: function() {
+								popup.destroy();
+								sel.deselectAll();
+							  }
+							}
+						]
+					}]
 				});
+				popup.show();
 			}
 		}
 	}]
