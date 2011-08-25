@@ -7,6 +7,8 @@ Ext.regApplication({
 
   , launch: function() {
     this.views.viewport = new this.views.Viewport();
+    Ext.anims.slide.config.duration=400;
+    Ext.anims.pop.config.duration=500;
   }
 
 });

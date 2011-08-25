@@ -9,7 +9,7 @@ app.views.Twitter = Ext.extend(Ext.Panel, {
 		cls: 'speakers-list',
 		xtype: 'list',
 		store: 'tweets',
-		itemTpl: '<img src="{profile_image_url}" /><div class="right light">{created_at}</div><p class=name>@{from_user}</p>{text}',
+		itemTpl: '<img src="{profile_image_url}" /><div class="right light">{created}</div><p class=name>@{from_user}</p>{text}',
 		plugins: [{ptype: 'pullrefresh'}],
 		listeners: {
 			selectionchange: function(sel, recs) {

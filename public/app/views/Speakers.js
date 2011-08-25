@@ -7,6 +7,7 @@ app.views.Speakers = Ext.extend(Ext.Panel, {
 	layout: 'fit',
 	items: [{
 		cls: 'speakers-list',
+		id: 'speakers-list',
 		xtype: 'list',
 		store: 'speakers',
 		itemTpl: '<img src="{image}"/> <p class=name>{name}</p> {desc}',
@@ -33,14 +34,14 @@ app.views.Speakers = Ext.extend(Ext.Panel, {
 							},
 							{ xtype: 'spacer'},
 							{ text: 'Close', handler: function() {
-								popup.destroy();
+								popup.hide();
 								sel.deselectAll();
 							  }
 							}
 						]
 					}]
 				});
-				popup.show();
+				popup.show({type: 'pop'});
 			}
 		}
 	}]

@@ -8,6 +8,14 @@ app.stores.tweets = new Ext.data.JsonStore({
 			root: 'results',
 			type: 'json'
 		}
+	},
+	listeners: {
+		load: function(store) {
+			store.data.items.forEach(function(rec) {
+				var at = rec.get('created_at');
+				rec.set('created', at.format('human') + ' a las ' + at.format('humantime'));
+			});
+		}
 	}
 });
 

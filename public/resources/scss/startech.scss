@@ -8,26 +8,24 @@ $base-gradient: 'bevel';
 $button-gradient: 'bevel';
 
 // Lists
-$list-bg-color: #364457;
+//$list-bg-color: #364457;
 $list-color: #BFCFE1;
 $list-pressed-color: black;
 $list-active-gradient: 'recessed';
 $list-header-bg-color: #999;
 $list-header-gradient: 'bevel';
 
-.x-panel {
-  background-color: $base-color;
-}
 
 /* Sale en ingles loading... */
 .x-loading-msg {
   font-size: 0px !important;
 }
 
+/*
 .front .x-panel-body {
   color: $list-color;
   background: url('http://www.startechconf.com/media/images/main-logo.png') no-repeat bottom right;
-}
+}*/
 
 
 .x-toolbar-title {
@@ -46,7 +44,7 @@ $list-header-gradient: 'bevel';
 }
 
 .front .x-toolbar-title {
-  background: url();
+  background: none;
 }
 
 /* Sponsors */
@@ -54,8 +52,8 @@ $list-header-gradient: 'bevel';
   background-color: white !important;
 }   
 .sponsorsList > .x-scroller > .x-item-selected {
+  background: none !important;
   background-color: white !important;
-  background-image: none !important;
 }   
 .sponsorsList > .x-scroller a { 
   color: black;
@@ -128,6 +126,28 @@ a {
   background: transparent url('http://www.startechconf.com/media/images/facebook.png') left center no-repeat;
   padding-left: 22px;
 }
+
+
+
+
+
+
+.x-panel-body > .x-scroller-parent {
+        background: #364457;
+        color: #BFCFE1;
+}
+
+/* Evita el flocker, ya que tiene el fondo del mismo color que un panel renderizado.. :P */
+.x-panel {
+        background-color: #364457;
+}
+
+.front .x-panel-body > .x-scroller-parent {
+        background: url('http://www.startechconf.com/media/images/main-logo.png') no-repeat bottom right;
+        background-color: #364457;
+}
+
+
 
 $tabs-dark-active-color: $naranjo;
 
