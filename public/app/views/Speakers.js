@@ -10,7 +10,7 @@ app.views.Speakers = Ext.extend(Ext.Panel, {
 		id: 'speakers-list',
 		xtype: 'list',
 		store: 'speakers',
-		itemTpl: '<img src="{image}"/> <p class=name>{name}</p> {desc}',
+		itemTpl: '<img width=80px src="{image}"/> <p class=name>{name}</p>{desc}',
 		listeners: {
 			selectionchange: function(sel, recs) {
 				var rec = recs[0];
