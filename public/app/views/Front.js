@@ -6,7 +6,7 @@ FrontView = Ext.extend(Ext.DataView, {
 		'<tpl for=".">',
 		'<div class=when>{when}</div>', 
 		'<div class=desc>{desc}</div>',
-		'<div class=weare>{counter} preincritos!</div>',
+//		'<div class=weare>{counter} preincritos!</div>',
 		'<div class=prices>',
 			'<tpl for="prices">',
 			'{type} - {price}<br/>',
