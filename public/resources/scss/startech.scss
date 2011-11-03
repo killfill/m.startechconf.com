@@ -149,6 +149,78 @@ a {
 
 
 
+/* Schedule */
+.schedule-list .x-list-item .x-list-item-body {
+
+	margin-left: 0px;
+	padding-left: 0px;
+
+	
+	.sch_left {
+		text-align: center;
+		float: left;
+		padding-right: 5px;
+		padding-left: 5px;
+		margin-right: 10px;
+		
+		padding-top: 10px;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+		
+		color: $base-color;
+		font-size: 0.6em;
+		background-color: #ccc;
+		color: black;
+		font-weight:bold;
+		
+	}
+
+	.name_speaker {
+		font-size: 0.6em;
+		float: right;
+	}
+
+	.track_-1 {
+		background-color: $naranjo;
+	}
+
+	.name_track_-1 {
+		color: white;
+		font-weight: bold;
+	}
+
+	.track_0 {
+		background-color: green;
+	}
+		
+	.name_track_0 {
+		//color: white;
+		font-weight: bold;
+	}
+	
+	.name_track {
+		font-size: 0.8em;
+	}
+
+/*
+	.track_0 {
+		background-color: $naranjo !important;
+		font-size: 0.60em;
+		color: white;
+	}
+	
+	.track_10 {
+		background-color: blue !important;
+		font-size: 0.60em;
+		color: white;
+		padding: 5px;
+	}
+	*/
+}
+
+
+
+
 $tabs-dark-active-color: $naranjo;
 
 @import 'sencha-touch/default/all';
@@ -156,7 +228,7 @@ $tabs-dark-active-color: $naranjo;
 @include pictos-iconmask('user_fave');
 @include pictos-iconmask('search');
 @include pictos-iconmask('chat');
-
+@include pictos-iconmask('calendar');
 
 @include sencha-panel;
 @include sencha-buttons;
